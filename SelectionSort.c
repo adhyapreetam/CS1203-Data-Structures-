@@ -20,7 +20,7 @@ int main(){
             array[pointr=swap;}
             printf("Sorted Array:n");
     for(i = 0; i < n; i++){
-    printf("%dn", a[i]);
+    printf("%d\n", a[i]);
     return 0; }
     }
 
