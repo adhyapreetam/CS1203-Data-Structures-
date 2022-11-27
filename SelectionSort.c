@@ -26,7 +26,7 @@ void printarr(int array[], int n) {
 int main(){
     int n;
     printf("Enter the size of your array: \n");
-    scanf("%d", n);
+    scanf("%d", &n);
     int array[n], i, j, pointr;
     printf("Enter your array: \n");
     for (i = 0; i < n; i++){
