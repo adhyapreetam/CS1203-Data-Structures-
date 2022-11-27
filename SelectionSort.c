@@ -1,5 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
+void swap(int *x, int *y) {
+  int tmp = *x;
+  *x = *y;
+  *y = tmp;
+}
+
+void sort(int array[], int n) {
+  for (int i = 0; i < n - 1; i++) {
+    int max = i;
+    for (int j = i + 1; j < n; j++) {
+      if (array[j] > array[max])
+        max = j;
+    }
+    swap(&array[max], &array[i]);
+  }
+}
+
+void printarr(int array[], int n) {
+  for (int i = 0; i < n; ++i) {
+    printf("%d ", array[i]);
+  }
+  printf("\n");
+}
 int main(){
     int n;
     printf("Enter the size of your array: \n");
@@ -9,20 +32,5 @@ int main(){
     for (i = 0; i < n; i++){
         scanf("%d", &array[i]);
     }
-    for (i = 0, i <  n-1, i++){
-        pointr = i;
-        for (j=i+1, j<n, j++){
-            if (array[pointr] < array[j])
-            pointr = j;
-            if (pointr != i)
-            {swap=array[i];
-            array[i]=array[pointr];
-            array[pointr=swap;}
-            printf("Sorted Array:n");
-    for(i = 0; i < n; i++){
-    printf("%d\n", a[i]);
-    return 0; }
-    }
-
-
+    sort(array, n);
 }
