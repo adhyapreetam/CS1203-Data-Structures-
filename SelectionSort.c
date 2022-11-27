@@ -33,4 +33,5 @@ int main(){
         scanf("%d", &array[i]);
     }
     sort(array, n);
+    printarr(array, n);
 }
