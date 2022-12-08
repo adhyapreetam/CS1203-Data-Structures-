@@ -1,8 +1,40 @@
 #include<stdio.h>
 int stack[100],choice,n,top,x,i;
+void push()
+{
+    if(top>=n-1)
+    {
+        printf("\n\tSTACK is over flow");
+        
+    }
+    else
+    {
+        printf(" Enter a value to be pushed:");
+        scanf("%d",&x);
+        top++;
+        stack[top]=x;
+    }
+}
+
+void 
+print()
+{
+    if(top>=0)
+    {
+        printf("\n The elements in STACK \n");
+        for(i=top; i>=0; i--)
+            printf("\n%d",stack[i]);
+        printf("\n Press Next Choice");
+    }
+    else
+    {
+        printf("\n The STACK is empty");
+    }
+   
+}
 void push(void);
-void pop(void);
-void display(void);
+
+void print(void);
 int main()
 {
     //clrscr();
@@ -48,45 +80,4 @@ int main()
     while(choice!=4);
     return 0;
 }
-void push()
-{
-    if(top>=n-1)
-    {
-        printf("\n\tSTACK is over flow");
-        
-    }
-    else
-    {
-        printf(" Enter a value to be pushed:");
-        scanf("%d",&x);
-        top++;
-        stack[top]=x;
-    }
-}
-void pop()
-{
-    if(top<=-1)
-    {
-        printf("\n\t Stack is under flow");
-    }
-    else
-    {
-        printf("\n\t The popped elements is %d",stack[top]);
-        top--;
-    }
-}
-void display()
-{
-    if(top>=0)
-    {
-        printf("\n The elements in STACK \n");
-        for(i=top; i>=0; i--)
-            printf("\n%d",stack[i]);
-        printf("\n Press Next Choice");
-    }
-    else
-    {
-        printf("\n The STACK is empty");
-    }
-   
-}
+
