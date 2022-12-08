@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <limits.h>
  
-#define SKIPLIST_MAX_LEVEL 6
+#to be re written 
  
 typedef struct snode {
     int key;
@@ -144,17 +144,7 @@ int main() {
     }
     skiplist_dump(&list);
  
-    printf("Search:--------------------\n");
-    int keys[] = { 3, 4, 7, 10, 111 };
- 
-    for (i = 0; i < sizeof(keys) / sizeof(keys[0]); i++) {
-        snode *x = skiplist_search(&list, keys[i]);
-        if (x) {
-            printf("key = %d, value = %d\n", keys[i], x->value);
-        } else {
-            printf("key = %d, not fuound\n", keys[i]);
-        }
-    }
+
  
     printf("Search:--------------------\n");
     skiplist_delete(&list, 3);
